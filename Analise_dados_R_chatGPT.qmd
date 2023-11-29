@@ -477,8 +477,8 @@ set.seed(42) # aplicando uma reprodutibilidade
 
 ```{r}
 # Armazenar a coluna "Código" na variável "ibov"
-ibov <- amostra$Código
-ibov
+# ibov <- amostra$Código
+# ibov
 ```
 
 Agora que já definimos a nossa amostra com os ativos que vamos extrair os dados, vamos aplicar a função para resgatar os indicadores de todos eles a fim de criar uma única tabela com os dados consolidados. Novamente, vamos perguntar como construir esse código para o ChatGPT.
@@ -556,7 +556,7 @@ Vamos testar se a conversão foi bem sucedida de acordo com código que geramos 
 
 ```{r}
 # Testando se a conversão foi bem sucedida
-str(dados_completos %>% select_if(is.numeric))
+# str(dados_completos %>% select_if(is.numeric))
 ```
 
 ### 2. Dados adimensionais (indicadores)
@@ -588,7 +588,7 @@ Vamos testar se a conversão foi bem sucedida de acordo com código que geramos 
 
 ```{r}
 # Testando se a conversão foi bem sucedida
-str(dados_completos %>% select_if(is.numeric))
+# str(dados_completos %>% select_if(is.numeric))
 ```
 
 ### 3. Dados percentuais
@@ -623,12 +623,12 @@ Vamos testar se a conversão foi bem sucedida de acordo com código que geramos 
 
 ```{r}
 # Testando se a conversão foi bem sucedida (lendo quantas colunas não são numéricas)
-dim(dados_completos %>% select_if(is.character))[2]
+# dim(dados_completos %>% select_if(is.character))[2]
 ```
 
 ```{r}
 # Lendo a estrutura das 5 primeiras colunas
-str(dados_completos[,c(1:5)])
+# str(dados_completos[,c(1:5)])
 ```
 
 Pronto! Agora nossa tabela está pronta para ser utilizada com os valores em seus devidos tipos. Vamos realizar alguns testes antes de salvá-la no formato `CSV`, que tem uma estrutura simples e é facilmente utilizado por diversos softwares de BI e de análise de dados.
@@ -643,7 +643,7 @@ Vamos inicialmente ler os diferentes setores que possuem em nossa base de dados:
 
 ```{r}
 # Quais setores aparecem na base de dados
-unique(dados_completos$Setor)
+# unique(dados_completos$Setor)
 ```
 
 Para filtrarmos por setor é interessante também observar a quantidade de repetições desses setores em nossa base de dados. Vamos utilizar o ChatGPT aqui?
