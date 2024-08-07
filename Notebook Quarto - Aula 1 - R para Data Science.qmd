@@ -32,7 +32,20 @@ salario <- 6230.50
 
 ```{r}
 ana_silva <- c("Ana Silva", 28, 6230.50, "Não possui", TRUE)
+```
 
-ana_silva
+
+```{r}
+nota <- 10.0
+idade <- 20L
+frase <- "Hello World"
+cadastrado <- TRUE
+data_atual <- as.Date("2024-08-07")
+
+cat("nota é do tipo", class(nota), ".\n")
+cat("idade é do tipo", class(idade), ".\n")
+cat("frase é do tipo", class(frase), ".\n")
+cat("cadastrado é do tipo", class(cadastrado), ".\n")
+cat("data_atual é do tipo", class(data_atual), ".\n")
 ```
 
