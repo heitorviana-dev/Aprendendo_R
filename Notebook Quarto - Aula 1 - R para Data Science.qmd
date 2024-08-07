@@ -49,3 +49,32 @@ cat("cadastrado é do tipo", class(cadastrado), ".\n")
 cat("data_atual é do tipo", class(data_atual), ".\n")
 ```
 
+### Criando a Tabela: 
+
+```{r}
+ana_silva <- c("Ana Silva", 28, 6230.50, "Não possui", TRUE)
+carlos_oliveira <- c("Carlos Oliveira", 40, 8000.25, "(21) 1234-5678", TRUE)
+maria_santos <- c("Maria Santos", 35, 7500.75, "(21) 9876-4321", TRUE)
+joao_costa <- c("Joao Costa", 32, 2460.80, "Não Possui", FALSE)
+fernanda_lima <- c("Fernanda Lima", 27, 4230.35, "(31) 8765-4321", TRUE)
+
+# Vamos agrupar os dados em uma matriz, sendo as linhas os colaboradores e as colunas o que os dados representam
+
+# Vamos utilizar a prática de combinar os vetores em um vetor só
+
+colab_combinado <- c(ana_silva, carlos_oliveira, maria_santos, joao_costa, fernanda_lima)
+
+# Agora vamos criar a matriz:
+
+matriz_colab <- matrix(colab_combinado, nrow = 5, byrow = TRUE)
+
+# Agora vamos nomear as colunas e linhas dessa matriz, para isso vamos usar duas funções:
+
+rownames(matriz_colab) <- c("Ana", "Carlos", "Maria", "Joao", "Fernanda")
+colnames(matriz_colab) <- c("Nome", "Idade", "Salário", "Telefone Fixo", "Trabalho Remoto")
+
+matriz_colab
+
+
+```
+
