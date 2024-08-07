@@ -73,8 +73,25 @@ matriz_colab <- matrix(colab_combinado, nrow = 5, byrow = TRUE)
 rownames(matriz_colab) <- c("Ana", "Carlos", "Maria", "Joao", "Fernanda")
 colnames(matriz_colab) <- c("Nome", "Idade", "Salário", "Telefone Fixo", "Trabalho Remoto")
 
-matriz_colab
 
 
+
+```
+
+### Exercício 1: Criando uma matriz
+
+```{r}
+tri_1 <- c(25, 30, 22, 28, 18)
+tri_2 <- c(20, 15, 22, 28, 32)
+tri_3 <- c(30, 35, 10, 15, 8)
+tri_4 <- c(12, 28, 25, 20, 22)
+
+dados <- c(tri_1, tri_2, tri_3, tri_4)
+
+matriz_trimestres <- matrix(data = dados, nrow = 4, byrow = TRUE)
+rownames(matriz_trimestres) <- c("Trimestre 1", "Trimestre 2", "Trimestre 3", "Trimestre 4")
+colnames(matriz_trimestres) <- c("São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Porto Alegre")
+
+matriz_trimestres
 ```
 
