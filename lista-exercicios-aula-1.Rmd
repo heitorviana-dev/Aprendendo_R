@@ -9,16 +9,14 @@ library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
 ## Aula 1
 
 ### Criar tabelas a partir de vetores e matrizes
 
-
 #### Crie um vetor chamado `vetor_notas` com notas pares de 2 a 10:
 
 ```{r vetor-notas, exercise=TRUE, exercise.eval=FALSE}
-# Seu código aqui
+vetor_notas <- c(2, 4, 6, 8, 10)
 ```
 
 ```{r vetor-notas-hint-1}
@@ -53,7 +51,6 @@ minha_matriz <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), nrow = 3, byrow = TRUE)
 
 ### Criar variáveis
 
-
 ```{r variaveis-quiz}
 quiz(
   question("Qual é a maneira correta de criar uma variável chamada 'idade' com valor 25?",
@@ -84,7 +81,7 @@ question_checkbox(
 
 ### Nomear vetores e matrizes
 
-#### Nomeie as linhas e colunas da matriz de salários abaixo. Utilize os nomes "João", "Maria" e "Pedro" para as linhas e os nomes "Jan", "Fev" e "Mar" para as colunas: 
+#### Nomeie as linhas e colunas da matriz de salários abaixo. Utilize os nomes "João", "Maria" e "Pedro" para as linhas e os nomes "Jan", "Fev" e "Mar" para as colunas:
 
 ```{r nomear-vetores, exercise = TRUE, exercise.blanks = "___"}
 matriz_salarios <- matriz(c(8200, 4400, 3800, 6500, 2600, 3500, 7100, 9000, 5200), nrow = 3, byrow = TRUE)
@@ -104,4 +101,3 @@ nomes_colunas <- c("Jan", "Fev", "Mar")
 rownames(matriz_salarios) <- nomes_linhas
 colnames(matriz_salarios) <- nomes_colunas
 ```
-
