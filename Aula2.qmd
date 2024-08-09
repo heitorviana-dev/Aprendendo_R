@@ -52,6 +52,16 @@ matriz_vendas[1, 3]
 matriz_vendas["Pedro Santos", "Marco"]
 ```
 
+## Criando vetores de sequências numéricas e datas:
+
+```{r}
+sequencia_numeros <- seq(1, 10, by = 1)
+sequencia_numeros
+
+sequencia_datas <- seq(Sys.Date(), by = "1 month", length.out = 6)
+sequencia_datas
+````
+
 
 
 
