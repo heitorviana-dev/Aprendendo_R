@@ -73,6 +73,8 @@ matriz_colab <- matrix(colab_combinado, nrow = 5, byrow = TRUE)
 rownames(matriz_colab) <- c("Ana", "Carlos", "Maria", "Joao", "Fernanda")
 colnames(matriz_colab) <- c("Nome", "Idade", "Salário", "Telefone Fixo", "Trabalho Remoto")
 
+matriz_colab
+
 
 
 
@@ -93,5 +95,17 @@ rownames(matriz_trimestres) <- c("Trimestre 1", "Trimestre 2", "Trimestre 3", "T
 colnames(matriz_trimestres) <- c("São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Porto Alegre")
 
 matriz_trimestres
+```
+
+### Criando um dataframe:
+
+```{r}
+meu_dataframe <- data.frame(
+  Nome = c("Ana", "Joao", "Carlos"),
+  Idade = c(29, 24, 32),
+  Salario = c(8000.25, 3004.85, 5008.98)
+)
+
+print(meu_dataframe)
 ```
 
