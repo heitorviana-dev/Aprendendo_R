@@ -60,7 +60,73 @@ sequencia_numeros
 
 sequencia_datas <- seq(Sys.Date(), by = "1 month", length.out = 6)
 sequencia_datas
-````
+```
+
+## Calculando o Faturamento:
+
+```{r}
+# Qual colaborador teve o maior faturamento de vendas?
+
+## Vamos usar uma função que soma todos os elementos das linhas e adiciona a soma a um vetor
+
+rowSums(matriz_vendas)
+
+```
+
+```{r}
+# Qual mês teve o maior faturamento?
+
+## Vamos usar uma função que soma todos os elementos das colunas e adiciona a soma a um vetor
+
+colSums(matriz_vendas)
+
+
+```
+
+## Adicionando uma nova coluna e uma nova linha a uma matriz:
+
+```{r}
+# Para adicionar uma nova coluna vamos usar a função cbind(<matriz>, <vetor reoresentando a nova coluna>)
+
+total_colaboradores <- rowSums(matriz_vendas)
+
+matriz_total_colab <- cbind(matriz_vendas, total_colaboradores)
+
+
+colnames(matriz_total_colab) <- c(meses, "Faturamento total")
+
+
+total_mensal <- colSums(matriz_vendas)
+
+matriz_vendas_nova <- rbind(matriz_vendas, total_mensal)
+
+rownames(matriz_vendas_nova) <- c(pessoas, "Faturamento Mensal")
+
+matriz_vendas_nova
+```
+
+```{r}
+temperaturas <- matrix(c(25, 30, 22, 28, 18, 20, 15, 22, 28, 32, 30, 35, 10, 15, 8, 12, 28, 25, 20, 22), nrow = 4, ncol = 5, byrow = TRUE)
+
+rownames(temperaturas) <- c("1 Tri", "2 Tri", "3 Tri", "4 Tri")
+
+colnames(temperaturas) <- c("SP", "BA", "PA", "MG", "RS" )
+
+temperaturas
+
+# Temperatura de SP ao longo de todos os trimestres do ano:
+
+temperaturas_SP <- temperaturas[1:4, "SP"]
+
+# Temperatura do 2 trimestre de todas as cidades:
+
+trimestre_2 <- temperaturas[2,]
+
+# Temperatura de MG no 3 trimestre:
+
+temperatura_MG_trimestre3 <- temperaturas[3, 4]
+
+```
 
 
 
